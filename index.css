@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #061925, #1d1636);
+  position: relative;
+}
+
+.content{
+  width: 100vw;
+  top: 20%;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+}
+
+.content h1{
+  font-size: 65px;
+  font-weight: 800;
+  text-shadow:
+    0 0 5px #0ff,
+    0 0 10px  #0ff;
+}
+
+.content h1 span{
+  font-size: 70px;
+  color:#f9ce43;
+  text-shadow:
+    0 0 5px #fe677b,
+    0 0 10px  #fe677b,
+    0 0 20px  #fe677b,
+    0 0 40px  #fe677b,
+    0 0 45px  #fe677bb1;
+  animation: flicker 5s linear infinite, pulse 2s infinite;
+  animation-delay: 1.4s;
+}
+
+@keyframes flicker{
+  0% {opacity: 1;}
+  10% {opacity: 1;}
+  90% {opacity: 1;}
+  95% {opacity: 1;}
+  96% {opacity: 0;}
+  97% {opacity: 1;}
+  98% {opacity: 1;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(0.50);
+  }
+
+  70%{
+    transform: scale(1);
+  }
+
+  100%{
+    transform: scale(0.50);
+  }
+}
